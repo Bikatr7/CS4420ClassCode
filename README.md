@@ -6,7 +6,7 @@
 - **Semester:** Fall 2025
 
 ## Description
-This repository contains the coursework for CS 4220 at the University of Colorado Colorado Springs, developed during the Fall 2025 semester. With all code implemented in Python.
+This repository contains the coursework for CS 4220 at the University of Colorado Colorado Springs, developed during the Fall 2025 semester.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
