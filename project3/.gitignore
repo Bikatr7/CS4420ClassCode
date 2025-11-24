@@ -1,0 +1,38 @@
+# Compiled binaries
+server
+client
+
+# Object files
+*.o
+*.obj
+
+# Log files
+logs/*.log
+
+# Docker
+.dockerignore
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-*
+
+# Backup files
+*.bak
+*.backup
+
+# Temporary files
+*.tmp
+temp/
+.cache/
