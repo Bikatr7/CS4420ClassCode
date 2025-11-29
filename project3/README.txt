@@ -1,7 +1,9 @@
 CS 4220 Computer Networks - Project 3
-Kaden Bilyeu (others tbd)
+Kaden Bilyeu, Samuel Aldinger, Enzo Knapp
 
 I have neither given nor received unauthorized assistance on this work.
+
+Note, we were unable to get the project working on blanca, but we got it working fine on redcloud, as well as locally on Mac and Linux
 
 Project Description:
 This project implements a secure HTTP client-server application using OpenSSL with mutual
@@ -99,7 +101,7 @@ openssl req -x509 -newkey rsa:2048 -nodes -keyout certs/server.key -out certs/se
 Client certificate:
 openssl req -x509 -newkey rsa:2048 -nodes -keyout certs/client.key -out certs/client.crt -days 365 -subj "/C=US/ST=Colorado/L=Colorado Springs/O=UCCS/CN=client"
 
-These certificates are already included in the certs/ directory.
+These certificates are already included in the certs/ directory, but if they are not please generate them.
 
 Summary of things Handled:
 
@@ -174,7 +176,6 @@ Makefile:
 - GCC compilation with OpenSSL flags
 - Separate targets for server and client
 - Clean target for removing binaries
-
 
 notes:
 
