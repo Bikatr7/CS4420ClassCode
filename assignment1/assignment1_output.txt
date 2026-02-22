@@ -1,0 +1,67 @@
+--------------
+DROP TABLE IF EXISTS hot_sauces
+--------------
+
+--------------
+CREATE TABLE hot_sauces ( sauce_id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100) NOT NULL, brand VARCHAR(75) NOT NULL, scoville_rating INT, date_added DATE NOT NULL, origin_country VARCHAR(50), volume_oz DECIMAL(5,2) )
+--------------
+
+--------------
+DESC hot_sauces
+--------------
+
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| sauce_id        | int          | NO   | PRI | NULL    | auto_increment |
+| name            | varchar(100) | NO   |     | NULL    |                |
+| brand           | varchar(75)  | NO   |     | NULL    |                |
+| scoville_rating | int          | YES  |     | NULL    |                |
+| date_added      | date         | NO   |     | NULL    |                |
+| origin_country  | varchar(50)  | YES  |     | NULL    |                |
+| volume_oz       | decimal(5,2) | YES  |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+--------------
+INSERT INTO hot_sauces (name, brand, scoville_rating, date_added, origin_country, volume_oz) VALUES ('Original Red Sauce', 'Franks RedHot', 450, '2024-03-15', 'United States', 5.00)
+--------------
+
+--------------
+INSERT INTO hot_sauces (name, brand, scoville_rating, date_added, origin_country, volume_oz) VALUES ('Sriracha', 'Huy Fong', 2200, '2023-11-01', 'United States', 17.00)
+--------------
+
+--------------
+INSERT INTO hot_sauces (name, brand, scoville_rating, date_added, origin_country, volume_oz) VALUES ('Habanero', 'El Yucateco', 8910, '2024-07-22', 'Mexico', 4.00)
+--------------
+
+--------------
+INSERT INTO hot_sauces (name, brand, scoville_rating, date_added, origin_country, volume_oz) VALUES ('Carolina Reaper Sauce', 'PuckerButt', 2200000, '2025-01-10', 'United States', 5.00)
+--------------
+
+--------------
+INSERT INTO hot_sauces (name, brand, scoville_rating, date_added, origin_country, volume_oz) VALUES ('Scotch Bonnet Pepper Sauce', 'Grace', 225000, '2024-09-05', 'Jamaica', 4.80)
+--------------
+
+--------------
+SELECT * FROM hot_sauces
+--------------
+
++----------+----------------------------+---------------+-----------------+------------+----------------+-----------+
+| sauce_id | name                       | brand         | scoville_rating | date_added | origin_country | volume_oz |
++----------+----------------------------+---------------+-----------------+------------+----------------+-----------+
+|        1 | Original Red Sauce         | Franks RedHot |             450 | 2024-03-15 | United States  |      5.00 |
+|        2 | Sriracha                   | Huy Fong      |            2200 | 2023-11-01 | United States  |     17.00 |
+|        3 | Habanero                   | El Yucateco   |            8910 | 2024-07-22 | Mexico         |      4.00 |
+|        4 | Carolina Reaper Sauce      | PuckerButt    |         2200000 | 2025-01-10 | United States  |      5.00 |
+|        5 | Scotch Bonnet Pepper Sauce | Grace         |          225000 | 2024-09-05 | Jamaica        |      4.80 |
++----------+----------------------------+---------------+-----------------+------------+----------------+-----------+
+--------------
+SELECT name, brand, scoville_rating FROM hot_sauces WHERE scoville_rating > 5000
+--------------
+
++----------------------------+-------------+-----------------+
+| name                       | brand       | scoville_rating |
++----------------------------+-------------+-----------------+
+| Habanero                   | El Yucateco |            8910 |
+| Carolina Reaper Sauce      | PuckerButt  |         2200000 |
+| Scotch Bonnet Pepper Sauce | Grace       |          225000 |
++----------------------------+-------------+-----------------+
